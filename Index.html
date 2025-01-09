@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Management and Coping - Complete Mental Wellness Platform</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="project.css">
+    
+    
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+    <div class="header-content container">
+        <h1>Peaceful Pathways</h1>
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#exercises">Exercises</a>
+                <a href="#tracking">Tracking</a>
+                <a href="#resources">Resources</a>
+                <a href="#community">Community</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="card1">
+                <h2 class="hd" >What is Stress And Coping ?.</h2>
+                <div class="CARD">
+                    <p><b>Stress</b> is the body's reaction to challenges or pressures, whether from external situations or internal thoughts. It triggers a "fight-or-flight" response, releasing hormones like cortisol and adrenaline. While stress can motivate action, excessive or prolonged stress can negatively impact both mental and physical health.</p>
+                    <p><b>Coping</b> is the body's response to stress. It involves managing stress and dealing with negative emotions, seeking help, and developing healthy coping mechanisms. While stress can lead to coping, excessive or prolonged stress can negatively impact both mental and physical health.</p><br>
+                    <p> 
+                <h2 class="hd" >What is Stress Management And Coping ?.</h2>        
+                    <b>Stress management</b> refers to proactive strategies aimed at preventing or reducing stress. It involves recognizing stress triggers, practicing relaxation techniques (e.g., deep breathing, meditation), maintaining a healthy lifestyle (exercise, nutrition, sleep), and adopting positive thinking. Effective time management, setting boundaries, and seeking support from others also play key roles in stress management.
+                    <br>    
+                    <b>Coping mechanisms</b> are the specific strategies used to handle stress once it occurs. Healthy coping involves problem-solving, managing emotions, mindfulness, and engaging in supportive social interactions or enjoyable activities. Unhealthy coping includes avoidance, substance abuse, emotional suppression, or overeating, which may provide temporary relief but worsen stress long-term.
+                    <br>
+                    While stress management focuses on reducing stress before it becomes overwhelming, coping addresses stress after it arises, helping individuals maintain emotional and physical well-being. Both are essential for managing stress effectively and maintaining a balanced life.</p>
+                </div>
+            </div>
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="grid">
+            
+            
+            <div class="card">
+                <h2>Quick Access</h2>
+                <div class="btn-group">
+                    <button class="btn" onclick="startBreathing()">Start Breathing</button>
+                    <button class="btn" onclick="startMeditation()">Meditate</button>
+                </div>
+            </div>
+                <div class="card">
+                <h3> Use WorkSheets</h3>
+                
+                <a href="worksheet1.html" class="worksheets">
+                    <button>Use WorkSheets</button>
+                  </a>
+                  
+                <p>Use these Worksheets to Measures your Stress.</p>
+        </div>
+            </div>
+        </section>
+
+        <!-- Interactive Exercises -->
+<!-- Interactive Exercises -->
+<h2 class="TEXT1">Interactive Exercises</h2>
+<section id="exercises" class="grid">
+    
+    <!-- <p>Engage in various exercises designed to enhance your stress management skills.</p> -->
+     <div class="exercise-card" onclick="showExercise1('breathing')">
+        <img src="https://www.manageminds.co.uk/app/uploads/woman-doing-yoga-to-relax.png" alt="Breathing Exercise" class="exercise-image">
+        <h3>Breathing Exercise</h3>
+        <p>Calm your mind and body with deep, rhythmic breathing.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise1('meditation')">
+        <img src="https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2021/3/shutterstock_1236746887.jpg" alt="Meditation" class="exercise-image">
+        <h3>Meditation</h3>
+        <p>Focus on the present moment to reduce stress and enhance mindfulness.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise1('pmr')">
+        <img src="https://www.mondaycampaigns.org/wp-content/uploads/2020/04/destress-monday-graphic-muscle-relaxation.png" alt="Progressive Muscle Relaxation" class="exercise-image">
+        <h3>Progressive Muscle Relaxation</h3>
+        <p>Relieve tension by tensing and relaxing each muscle group.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise1('visualization')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhYFdjAleUZXd5ERgJDR8efOwQYoBgIj-d0w&s" alt="Visualization" class="exercise-image">
+        <h3>Visualization</h3>
+        <p>Imagine a peaceful place to create mental relaxation.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise1('grounding')">
+        <img src="https://i.guim.co.uk/img/media/a9f5fb9d9362d65a5ca1ce31053f8747d33557ef/0_0_1259_756/master/1259.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=ccd278498ccd92af0e0ff5c83a50366f" alt="Grounding Exercise" class="exercise-image">
+        <h3>Grounding Exercise</h3>
+        <p>Use your senses to anchor yourself in the present moment.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise1('boxBreathing')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWB56vI1QVndmiDKfNWHBhFn3hmob7HzQdGw&s" alt="Box Breathing" class="exercise-image">
+        <h3>Box Breathing</h3>
+        <p>Practice structured breathing to regulate stress and anxiety.</p>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <h3 id="popup-title">Exercise Title</h3>
+            <img id="popup-image" src="" alt="" class="">
+            <p id="popup-description">Exercise Description</p>
+        </div>
+    </div>
+
+    
+</section>>
+<h2 class="TEXT1">Coping Techniques</h2><br>
+<p class="TEXT1">Explore a variety of resources for coping.</p>
+<section id="exercises" class="grid">
+    <div class="exercise-card" onclick="showExercise('healthyRoutines')">
+        <img src="https://cdn.prod.website-files.com/61e6c90e435827340c0fc09d/6581923dc41459442259d93e_159.png" alt="Healthy routines and sleep hygiene" class="exercise-image" />
+        <h3>Healthy Routines and Sleep Hygiene</h3>
+        <p>Establishing a regular schedule for eating, exercising, and sleeping.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise('acceptingControl')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb1CUXtngqitTB8-_T8ATFUX2EfVT7rm6rvg&s" alt="Accepting what you can't control" class="exercise-image" />
+        <h3>Accepting What You Can’t Control</h3>
+        <p>Recognizing when certain things are outside of your control and letting go of the need to change them.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise('cbt')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Cognitive_behavioral_therapy_-_basic_tenets.svg" alt="Cognitive Behavioral Therapy" class="exercise-image" />
+        <h3>Cognitive Behavioral Therapy (CBT)</h3>
+        <p>Techniques that help change negative thought patterns contributing to stress.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise('timeInNature')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQfcwLgOdeD8bi2pRNYTnIzDcGgdioRhvcw&s" alt="Time in nature" class="exercise-image" />
+        <h3>Time in Nature</h3>
+        <p>Spending time outdoors, in a park, forest, or near water, away from the demands of everyday life.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise('physicalActivity')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTE5n9FEfTGKMqUm-siC9crUPOjoQEPPxqOQ&s" alt="Physical activity" class="exercise-image" />
+        <h3>Physical Activity</h3>
+        <p>Regular exercise is proven to reduce stress hormones and increase endorphins.</p>
+    </div>
+
+    <div class="exercise-card" onclick="showExercise('distractionTechniques')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfnWQss7OJE8RMk0qbEfr6e7uJsAx1sFNhQ&s" alt="Distraction techniques" class="exercise-image" />
+        <h3>Distraction Techniques</h3>
+        <p>Engaging in activities like reading, watching a movie, or doing a hobby to take your mind off stress.</p>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <h3 id="popup-title">Title</h3>
+            <p id="popup-description">Description</p>
+        </div>
+    </div>
+
+</section>
+
+
+        <!-- Visualization Section -->
+        <section id="tracking">
+            <h2>Your Progress</h2>
+            <p>Visualize your mood over the week by entering your mood levels below (1-10).</p>
+            <div class="form-container1">
+                <form id="moodForm">
+                    <label for="moodMon">😐 Monday: </label>
+                    <input type="number" id="moodMon" min="1" max="10" required><br>
+                    <label for="moodTue">🙂 Tuesday: </label>
+                    <input type="number" id="moodTue" min="1" max="10" required><br>
+                    <label for="moodWed">😌 Wednesday: </label>
+                    <input type="number" id="moodWed" min="1" max="10" required><br>
+                    <label for="moodThu">😊 Thursday: </label>
+                    <input type="number" id="moodThu" min="1" max="10" required><br>
+                    <label for="moodFri">😁 Friday: </label>
+                    <input type="number" id="moodFri" min="1" max="10" required><br>
+                    <label for="moodSat">😌 Saturday: </label>
+                    <input type="number" id="moodSat" min="1" max="10" required><br>
+                    <label for="moodSun">😐 Sunday: </label>
+                    <input type="number" id="moodSun" min="1" max="10" required><br>
+                    <button type="submit">Update Mood Chart</button>
+                </form>
+            </div>
+            <div class="chart-container">
+                <canvas id="moodChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        
+            <h2 class="TEXT1" >Resources</h2>
+            <p class="TEXT1">Explore a variety of resources to support your stress management journey.</p>
+            <section id="resources" class="grid">
+            
+            
+            <div class="card">
+                
+                <li><a href="https://www.nimh.nih.gov/health/publications/coping-with-stress" target="_blank">National Institute of Mental Health (NIMH) - Coping with Stress</a> - Practical tips for coping with stress and information about how stress can affect the body and mind.</li>
+            </div>
+                <div class="card">
+               <li><a href="https://www.apa.org/topics/stress" target="_blank">American Psychological Association (APA) - Stress Management</a> - Comprehensive articles on what stress is, how it affects mental and physical health, and effective ways to manage it.</li>
+                
+            </div>
+
+            <div class="card">
+                <li><a href="https://www.webmd.com/balance/stress-management" target="_blank">WebMD - Stress Management</a> - A wide variety of articles on stress management, including different techniques such as deep breathing, mindfulness, and exercise.</li>
+            </div>
+            <div class="card">
+                <li><a href="https://www.mindful.org" target="_blank">Mindful.org - Mindfulness for Stress Reduction</a> - An excellent resource for learning about mindfulness practices that can help reduce stress and increase emotional regulation.</li>
+            </div>
+            <div class="card">
+                
+                <li><a href="https://www.psychologytoday.com/us/basics/stress/stress-management-strategies" target="_blank">Psychology Today - Stress Management Strategies</a> - Practical advice on handling stress, including cognitive-behavioral strategies and time management tips.</li>
+            </div>
+            <div class="card">
+                
+                <li><a href="https://www.mindful.org" target="_blank">Mindful.org</a> - Articles and resources on mindfulness.</li>
+            </div>
+            <div class="card">
+                
+                <li><a href="https://www.headspace.com" target="_blank">Headspace</a> - Guided meditations and mindfulness practices.</li>
+            </div>
+            <div class="card">
+                
+                <li><a href="https://www.calm.com" target="_blank">Calm</a> - Sleep stories, meditation, and relaxation techniques.</li>
+            </div>
+            </section>
+             <!-- Coping Techniques Section -->
+
+    
+
+<!-- Community Section -->
+<h2 class="TEXT1">Community</h2> <br>
+<p class="TEXT1">Join our community to connect with others on their stress management journey.</p>
+<section id="community" class="grid">
+    <div class="card">
+        <a href="https://www.facebook.com/groups/stressmanagement">Discussion Forum</a> - Share experiences and tips with others.
+    </div>
+    
+    <div class="card">
+        <a href="https://www.eventbrite.com/d/online/stress-management/">Events</a> - Participate in community events and workshops.
+    </div>
+    
+    <div class="card">
+        <a href="https://www.facebook.com/groups/mentalhealthsupport">Support Groups</a> - Find support and encouragement from peers.
+    </div>
+    
+    <div class="card">
+        <a href="https://www.psychologytoday.com/us/topics/stress">Online Resources</a> - Access a curated list of articles and tools for stress management.
+    </div>
+    
+    <div class="card">
+        <a href="https://www.meetup.com/topics/stress-management/">Local Meetups</a> - Join local gatherings to connect with others in person.
+    </div>
+    
+    <div class="card">
+        <a href="https://www.youtube.com/results?search_query=stress+management+webinars">Webinars</a> - Attend online seminars featuring experts in stress management and mental health.
+    </div>
+    
+    <div class="card">
+        <a href="https://www.volunteermatch.org/search/orgs.jsp?r=msa">Volunteer Opportunities</a> - Get involved in community service to help others while managing your own stress.
+    </div>
+</section>
+   
+                
+                
+ <footer class="footer">
+        <p>&copy; 2024 Peaceful Pathways. All rights reserved.</p>
+    </footer>
+    </main>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="btn" onclick="setTheme('light-theme')" aria-label="Switch to Light Theme">🌞</button>
+        <button class="btn" onclick=" setTheme('dark-theme')" aria-label="Switch to Dark Theme">🌙</button>
+        <button class="btn" onclick="setTheme('calm-theme')" aria-label="Switch to Calm Theme">🧘</button>
+    </div>
+
+    <!-- Exercise Details Section -->
+    <div id="exerciseDetails" class="exercise-details"></div>
+    <div id="exerciseDetails" class="exercise-details">
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+        <div id="exerciseContent"></div>
+    </div>
+    <!-- Scripts -->
+    <script src="script.js" >
+
+    </script>
+        
+    
+</body>
+</html>

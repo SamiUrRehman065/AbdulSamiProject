@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stress Management Worksheets</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2C3E50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #2C3E50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .worksheet {
+      margin: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2C3E50;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .example {
+      font-weight: bold;
+      color: #2980B9;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    table th {
+      background-color: #2C3E50;
+      color: white;
+    }
+
+    input[type="text"], input[type="number"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    button {
+      background-color: #3498DB;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980B9;
+    }
+
+    .content {
+      padding: 30px;
+      margin-bottom: 70px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Stress Management and Coping Worksheets</h1>
+  </header>
+
+  <!-- Content Section -->
+  <div class="content">
+
+    <!-- Worksheet 1 -->
+    <section class="worksheet" id="worksheet-1">
+      <h2>Worksheet 1: Identifying Stressors</h2>
+      <p><strong>Instructions:</strong> List your stressors, rate their intensity, and categorize them.</p>
+      <p class="example"><strong>Example:</strong> Deadlines | Stress Level: 8 | Category: Work</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Stressor</th>
+            <th>Stress Level (1-10)</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" id="stressor-1" placeholder="Example: Deadlines"></td>
+            <td><input type="number" id="stress-level-1" placeholder="1-10"></td>
+            <td><input type="text" id="category-1" placeholder="Example: Work"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Worksheet 2 -->
+    <section class="worksheet" id="worksheet-2">
+      <h2>Worksheet 2: Physical Symptoms of Stress</h2>
+      <p><strong>Instructions:</strong> Circle symptoms you experience and mark the body areas affected.</p>
+      <p class="example"><strong>Example:</strong> Headaches | Affects: Forehead and temples</p>
+      <ul>
+        <li><input type="checkbox" id="headaches"> Headaches</li>
+        <li><input type="checkbox" id="fatigue"> Fatigue</li>
+        <li><input type="checkbox" id="muscle-tension"> Muscle tension</li>
+        <li><input type="checkbox" id="rapid-heartbeat"> Rapid heartbeat</li>
+        <li><input type="checkbox" id="upset-stomach"> Upset stomach</li>
+        <li><input type="checkbox" id="sweating"> Sweating</li>
+        <li><input type="checkbox" id="difficulty-sleeping"> Difficulty sleeping</li>
+      </ul>
+    </section>
+
+    <!-- Worksheet 3 -->
+    <section class="worksheet" id="worksheet-3">
+      <h2>Worksheet 3: Stress Management Techniques</h2>
+      <p><strong>Instructions:</strong> Match the stress scenarios with appropriate coping techniques.</p>
+      <p class="example"><strong>Example:</strong> Feeling anxious before a meeting - Deep breathing</p>
+      <ul>
+        <li>Feeling anxious before a meeting - <input type="text" id="technique-1" placeholder="Enter coping technique"></li>
+        <li>Overwhelmed with tasks - <input type="text" id="technique-2" placeholder="Enter coping technique"></li>
+        <li>Trouble sleeping - <input type="text" id="technique-3" placeholder="Enter coping technique"></li>
+      </ul>
+    </section>
+
+    <!-- Worksheet 4 -->
+    <section class="worksheet" id="worksheet-4">
+      <h2>Worksheet 4: Thought Reframing</h2>
+      <p><strong>Instructions:</strong> Write down a stressful thought and reframe it into a positive or neutral perspective.</p>
+      <p class="example"><strong>Example:</strong> Stressful Thought: "I’ll never finish this project." | Reframed Thought: "I’ll tackle one step at a time."</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Stressful Thought</th>
+            <th>Reframed Thought</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" id="stressful-thought-1" placeholder="Example: I’ll never finish this project."></td>
+            <td><input type="text" id="reframed-thought-1" placeholder="Example: I’ll tackle one step at a time."></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Worksheet 5 -->
+    <section class="worksheet" id="worksheet-5">
+      <h2>Worksheet 5: Daily Stress Check-In</h2>
+      <p><strong>Instructions:</strong> Record your stress level each day for one week.</p>
+      <p class="example"><strong>Example:</strong> Monday: Stress Level: 7 | Cause: Deadlines | Coping Strategy: Break tasks into smaller pieces</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Stress Level (1-10)</th>
+            <th>Main Cause of Stress</th>
+            <th>Coping Strategy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td><input type="number" id="monday-stress-level" placeholder="1-10"></td>
+            <td><input type="text" id="monday-cause" placeholder="Cause"></td>
+            <td><input type="text" id="monday-strategy" placeholder="Coping Strategy"></td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td><input type="number" id="tuesday-stress-level" placeholder="1-10"></td>
+            <td><input type="text" id="tuesday-cause" placeholder="Cause"></td>
+            <td><input type="text" id="tuesday-strategy" placeholder="Coping Strategy"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Worksheet 6 -->
+    <section class="worksheet" id="worksheet-6">
+      <h2>Worksheet 6: Visualization Exercise</h2>
+      <p><strong>Instructions:</strong> Describe or draw a place where you feel relaxed and list ways to mentally visit it.</p>
+      <p class="example"><strong>Example:</strong> Calm place: A quiet beach | Ways to visit: Close eyes, take deep breaths, imagine the sound of waves</p>
+      <textarea id="calm-place" placeholder="Describe your calm place..."></textarea>
+      <ul>
+        <li><input type="text" id="visit-ways" placeholder="Enter ways to visit"></li>
+      </ul>
+    </section>
+
+    <!-- Worksheet 7 -->
+    <section class="worksheet" id="worksheet-7">
+      <h2>Worksheet 7: Gratitude Practice</h2>
+      <p><strong>Instructions:</strong> Write down three things you’re grateful for and reflect on them.</p>
+      <p class="example"><strong>Example:</strong> 1. Family | 2. Health | 3. Friends | How it makes me feel: Appreciative and calm</p>
+      <textarea id="gratitude" placeholder="List what you're grateful for..."></textarea>
+      <ul>
+        <li><input type="text" id="gratitude-1" placeholder="First thing you're grateful for"></li>
+        <li><input type="text" id="gratitude-2" placeholder="Second thing you're grateful for"></li>
+        <li><input type="text" id="gratitude-3" placeholder="Third thing you're grateful for"></li>
+      </ul>
+    </section>
+
+    <!-- Download Button -->
+    <button id="download-btn">Download Worksheets as PDF</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Stress Management Tools | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById('download-btn').addEventListener('click', function () {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      doc.setFontSize(16);
+      doc.text('Stress Management and Coping Worksheets', 20, 20);
+
+      // Save data for Worksheet 1: Identifying Stressors
+      const worksheet1Data = {
+        stressor: document.getElementById('stressor-1').value,
+        stressLevel: document.getElementById('stress-level-1').value,
+        category: document.getElementById('category-1').value
+      };
+
+      // Worksheet 2: Physical Symptoms of Stress
+      const worksheet2Data = {
+        headaches: document.getElementById('headaches').checked,
+        fatigue: document.getElementById('fatigue').checked,
+        muscleTension: document.getElementById('muscle-tension').checked,
+        rapidHeartbeat: document.getElementById('rapid-heartbeat').checked,
+        upsetStomach: document.getElementById('upset-stomach').checked,
+        sweating: document.getElementById('sweating').checked,
+        difficultySleeping: document.getElementById('difficulty-sleeping').checked
+      };
+
+      // Worksheet 3: Stress Management Techniques
+      const worksheet3Data = {
+        anxiousMeeting: document.getElementById('technique-1').value,
+        overwhelmedTasks: document.getElementById('technique-2').value,
+        troubleSleeping: document.getElementById('technique-3').value
+      };
+
+      // Worksheet 4: Thought Reframing
+      const worksheet4Data = {
+        stressfulThought1: document.getElementById('stressful-thought-1').value,
+        reframedThought1: document.getElementById('reframed-thought-1').value
+      };
+
+      // Worksheet 5: Daily Stress Check-In
+      const worksheet5Data = {
+        monday: {
+          stressLevel: document.getElementById('monday-stress-level').value,
+          cause: document.getElementById('monday-cause').value,
+          strategy: document.getElementById('monday-strategy').value
+        },
+        tuesday: {
+          stressLevel: document.getElementById('tuesday-stress-level').value,
+          cause: document.getElementById('tuesday-cause').value,
+          strategy: document.getElementById('tuesday-strategy').value
+        }
+      };
+
+      // Worksheet 6: Visualization Exercise
+      const worksheet6Data = {
+        calmPlace: document.getElementById('calm-place').value,
+        visitWays: document.getElementById('visit-ways').value
+      };
+
+      // Worksheet 7: Gratitude Practice
+      const worksheet7Data = {
+        gratitude: document.getElementById('gratitude').value,
+        gratitude1: document.getElementById('gratitude-1').value,
+        gratitude2: document.getElementById('gratitude-2').value,
+        gratitude3: document.getElementById('gratitude-3').value
+      };
+
+      // Adding all data to the PDF
+      doc.text('Worksheet 1: Identifying Stressors', 20, 30);
+      doc.text('Stressor: ' + worksheet1Data.stressor, 20, 40);
+      doc.text('Stress Level: ' + worksheet1Data.stressLevel, 20, 50);
+      doc.text('Category: ' + worksheet1Data.category, 20, 60);
+
+      doc.text('Worksheet 2: Physical Symptoms of Stress', 20, 70);
+      doc.text('Headaches: ' + worksheet2Data.headaches, 20, 80);
+      doc.text('Fatigue: ' + worksheet2Data.fatigue, 20, 90);
+      doc.text('Muscle tension: ' + worksheet2Data.muscleTension, 20, 100);
+      doc.text('Rapid heartbeat: ' + worksheet2Data.rapidHeartbeat, 20, 110);
+      doc.text('Upset stomach: ' + worksheet2Data.upsetStomach, 20, 120);
+      doc.text('Sweating: ' + worksheet2Data.sweating, 20, 130);
+      doc.text('Difficulty sleeping: ' + worksheet2Data.difficultySleeping, 20, 140);
+
+      doc.text('Worksheet 3: Stress Management Techniques', 20, 150);
+      doc.text('Feeling anxious before a meeting: ' + worksheet3Data.anxiousMeeting, 20, 160);
+      doc.text('Overwhelmed with tasks: ' + worksheet3Data.overwhelmedTasks, 20, 170);
+      doc.text('Trouble sleeping: ' + worksheet3Data.troubleSleeping, 20, 180);
+
+      doc.text('Worksheet 4: Thought Reframing', 20, 190);
+      doc.text('Stressful Thought: ' + worksheet4Data.stressfulThought1, 20, 200);
+      doc.text('Reframed Thought: ' + worksheet4Data.reframedThought1, 20, 210);
+
+      doc.text('Worksheet 5: Daily Stress Check-In', 20, 220);
+      doc.text('Monday Stress Level: ' + worksheet5Data.monday.stressLevel, 20, 230);
+      doc.text('Monday Cause: ' + worksheet5Data.monday.cause, 20, 240);
+      doc.text('Monday Coping Strategy: ' + worksheet5Data.monday.strategy, 20, 250);
+      doc.text('Tuesday Stress Level: ' + worksheet5Data.tuesday.stressLevel, 20, 260);
+      doc.text('Tuesday Cause: ' + worksheet5Data.tuesday.cause, 20, 270);
+      doc.text('Tuesday Coping Strategy: ' + worksheet5Data.tuesday.strategy, 20, 280);
+
+      doc.text('Worksheet 6: Visualization Exercise', 20, 290);
+      doc.text('Calm Place: ' + worksheet6Data.calmPlace, 20, 300);
+      doc.text('Ways to visit: ' + worksheet6Data.visitWays, 20, 310);
+
+      doc.text('Worksheet 7: Gratitude Practice', 20, 320);
+      doc.text('Gratitude: ' + worksheet7Data.gratitude, 20, 330);
+      doc.text('Gratitude 1: ' + worksheet7Data.gratitude1, 20, 340);
+      doc.text('Gratitude 2: ' + worksheet7Data.gratitude2, 20, 350);
+      doc.text('Gratitude 3: ' + worksheet7Data.gratitude3, 20, 360);
+
+      // Save PDF
+      doc.save('Stress_Management_Workbooks.pdf');
+    });
+  </script>
+
+</body>
+</html>
